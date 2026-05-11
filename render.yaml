@@ -11,6 +11,7 @@ services:
     buildCommand: |
       export CGO_ENABLED=0
       go mod tidy
+      mkdir -p build
       go build -tags netgo -o build/gaiad ./cmd/gaiad
 
     startCommand: |

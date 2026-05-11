@@ -82,8 +82,6 @@ require (
 	github.com/bgentry/speakeasy v0.2.0 // indirect
 	github.com/bits-and-blooms/bitset v1.24.3 // indirect
 	github.com/bytedance/gopkg v0.1.3 // indirect
-	github.com/bytedance/sonic v1.14.2 // indirect
-	github.com/bytedance/sonic/loader v0.4.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/chigopher/pathlib v0.19.1 // indirect
@@ -282,21 +280,16 @@ require (
 )
 
 replace (
-	// Use cosmos keyring
 	github.com/99designs/keyring => github.com/cosmos/keyring v1.2.0
 
-	// Stable Cosmos SDK version
 	github.com/cosmos/cosmos-sdk => github.com/cosmos/cosmos-sdk v0.53.4
 
-	// JWT fix
 	github.com/dgrijalva/jwt-go => github.com/golang-jwt/jwt/v4 v4.4.2
 
-	// Gin compatibility
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.8.1
 
-	// Stable goleveldb
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
-
-	// FIX Render sonic crash
-	github.com/bytedance/sonic => github.com/bytedance/sonic v1.11.6
 )
+
+exclude github.com/bytedance/sonic v1.14.2
+exclude github.com/bytedance/sonic/loader v0.4.0

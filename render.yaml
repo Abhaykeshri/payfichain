@@ -6,9 +6,10 @@ services:
 
     envVars:
       - key: GO_VERSION
-        value: 1.22.2
+        value: 1.21.13
 
     buildCommand: |
+      export CGO_ENABLED=0
       go mod tidy
       make build
 

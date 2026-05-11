@@ -2,5 +2,10 @@ services:
   - type: web
     name: payfichain
     env: go
-    buildCommand: make build
-    startCommand: ./build/gaiad start
+    plan: free
+
+    buildCommand: |
+      make build
+
+    startCommand: |
+      ./build/gaiad start --minimum-gas-prices=0.025stake

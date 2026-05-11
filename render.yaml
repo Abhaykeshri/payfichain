@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: payfichain
+    env: go
+    buildCommand: make build
+    startCommand: ./build/gaiad start

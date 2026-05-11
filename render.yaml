@@ -11,7 +11,7 @@ services:
     buildCommand: |
       export CGO_ENABLED=0
       go mod tidy
-      make build
+      go build -tags netgo -o build/gaiad ./cmd/gaiad
 
     startCommand: |
       ./build/gaiad start --minimum-gas-prices=0.025stake

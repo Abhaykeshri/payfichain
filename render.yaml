@@ -9,6 +9,7 @@ services:
         value: 1.22.2
 
     buildCommand: |
+      go mod tidy
       make build
 
     startCommand: |

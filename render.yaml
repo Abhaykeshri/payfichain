@@ -4,6 +4,10 @@ services:
     env: go
     plan: free
 
+    envVars:
+      - key: GO_VERSION
+        value: 1.22.2
+
     buildCommand: |
       make build
 
